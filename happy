@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Giáng Sinh</title>
+    <style>
+        body {
+            background-color: #2e3b4e;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px 20px;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #FF6347;
+            text-shadow: 2px 2px 5px rgba(255, 99, 71, 0.7);
+        }
+
+        p {
+            font-size: 24px;
+            color: #FFD700;
+            text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.7);
+            margin-top: 20px;
+        }
+
+        .snowflakes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .snowflake {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            opacity: 0.8;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateY(-10px);
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0.8;
+            }
+        }
+
+        .lights {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            animation: flicker 1s infinite alternate;
+        }
+
+        .lights span {
+            font-size: 30px;
+            color: #FFD700;
+            animation: lightFlicker 1s infinite alternate;
+        }
+
+        @keyframes lightFlicker {
+            0% {
+                text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+            }
+            100% {
+                text-shadow: 0 0 5px #FFD700, 0 0 15px #FFD700, 0 0 25px #FFD700;
+            }
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.7;
+            }
+        }
+
+        .gift {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .gift img {
+            width: 100px;
+            height: 100px;
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .santa {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: moveSanta 6s infinite alternate;
+        }
+
+        .santa img {
+            width: 150px;
+            height: auto;
+        }
+
+        @keyframes moveSanta {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-60%) translateY(-20px);
+            }
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chúc Mừng Giáng Sinh!</h1>
+    <p>Mong rằng mùa Giáng Sinh này sẽ mang lại cho bạn niềm vui, hạnh phúc và sự an lành.</p>
+
+    <!-- Snowflakes effect -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake" style="left: 10%; animation-duration: 10s; animation-delay: 0s;"></div>
+        <div class="snowflake" style="left: 20%; animation-duration: 12s; animation-delay: 2s;"></div>
+        <div class="snowflake" style="left: 30%; animation-duration: 15s; animation-delay: 3s;"></div>
+        <div class="snowflake" style="left: 40%; animation-duration: 13s; animation-delay: 1s;"></div>
+        <div class="snowflake" style="left: 50%; animation-duration: 10s; animation-delay: 4s;"></div>
+        <div class="snowflake" style="left: 60%; animation-duration: 14s; animation-delay: 5s;"></div>
+        <div class="snowflake" style="left: 70%; animation-duration: 12s; animation-delay: 6s;"></div>
+        <div class="snowflake" style="left: 80%; animation-duration: 18s; animation-delay: 7s;"></div>
+        <div class="snowflake" style="left: 90%; animation-duration: 16s; animation-delay: 8s;"></div>
+    </div>
+
+    <!-- Lấp lánh ánh sáng -->
+    <div class="lights">
+        <span>✨ Mùa Giáng Sinh An Lành ✨</span>
+    </div>
+
+    <!-- Quà tặng -->
+    <div class="gift">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Gift_box_icon.svg/1200px-Gift_box_icon.svg.png" alt="Quà tặng">
+    </div>
+
+    <!-- Ông già Noel -->
+    <div class="santa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Santa_Claus.svg/2048px-Santa_Claus.svg.png" alt="Ông già Noel">
+    </div>
+
+</body>
+</html>
